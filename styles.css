@@ -1,0 +1,487 @@
+/*=========================== 
+  Root Variables
+===========================*/
+:root {
+  --dark: #000000;
+  --darker: #000000;
+  --primary: #FF8282; /* Updated primary color */
+  --secondary: #FF6363; /* Updated secondary color */
+  --light: #BEE4D0; /* Updated light color */
+  --background-light: #DBFFCB; /* New light background color */
+  --text-dark: #3330;
+  --text-light: #fff;
+}
+
+/*=========================== 
+  Global Styles
+===========================*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background: var(--background-light); /* Updated background */
+  color: var(--text-dark);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/*=========================== 
+  Navigation Styles
+===========================*/
+.navbar-nav {
+  list-style: none;
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.navbar-nav li a,
+.dark-toggle {
+  color: var(--text-light);
+  font-weight: 500;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.navbar-nav li a:hover,
+.dark-toggle:hover {
+  text-decoration: underline;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  background: var(--dark);
+  padding: 0.5rem;
+  border-radius: 5px;
+  margin-top: 0.5rem;
+}
+
+.navbar-dropdown:hover .dropdown {
+  display: block;
+}
+
+/*=========================== 
+  Hero Section
+===========================*/
+.hero-header {
+  width: 100%;
+  min-height: 100vh;
+  background: #db9393; /* Consider updating this if needed */
+  transition: background 0.3s ease;
+}
+
+.wrapper {
+  width: 1280px;
+  max-width: 95%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header {
+  padding: 40px 0 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+nav .togglebtn {
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  top: 45px;
+  right: 3%;
+  z-index: 5;
+  cursor: pointer;
+  display: none;
+}
+
+nav .togglebtn span {
+  display: block;
+  background-color: #FF6363; /* Updated toggle color */
+  margin: 5px 0;
+  width: 100%;
+  height: 3px;
+  transition: 0.3s;
+}
+
+/* Toggle animation */
+.click span {
+  position: absolute;
+  margin-top: 12px;
+}
+
+.click span:first-child {
+  transform: rotate(-40deg);
+}
+
+.click span:nth-child(2) {
+  opacity: 0;
+  margin: 0;
+}
+
+.click span:last-child {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+/* Navigation Links */
+nav .navlinks {
+  z-index: 1000;
+  display: flex;
+  justify-content: flex-end;
+  list-style-type: none;
+}
+
+nav .navlinks li {
+  display: inline-block;
+}
+
+nav .navlinks li a {
+  color: #e5e5e5;
+  margin-right: 2.5rem;
+}
+
+.navlinks li a:hover {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #FF6363; /* Updated hover color */
+  transition: 0.5s;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 4rem;
+}
+
+.hero-pic {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 15px solid #444;
+  box-shadow: 5px 7px 25px rgba(0, 0, 0, 0.5);
+}
+
+.hero-pic img {
+  height: 100%;
+  width: 100%;
+  transition: 0.5s;
+}
+
+.hero-pic img:hover {
+  transform: scale(1.2);
+}
+
+.hero-text {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-text h5 {
+  color: #e5e5e5;
+  font-size: 14px;
+}
+
+.hero-text h5 span {
+  color: #FF6363; /* Updated span color */
+  font-size: 16px;
+}
+
+.hero-text h1 {
+  color: #FF6363; /* Updated h1 color */
+  font-size: 3rem;
+}
+
+.hero-text p {
+  color: #e5e5e5;
+}
+
+.btn-group {
+  margin: 45px 0;
+}
+
+.btn-group .btn {
+  color: #fff;
+  background-color: #FF8282; /* Updated button background */
+  padding: 12px 25px;
+  margin: 5px 0;
+  margin-right: 7px;
+  border-radius: 30px;
+  border: 2px solid #e5e5e5;
+  box-shadow: 0 10px 10px -8px rgba(0, 0, 0, 0.78);
+  transition: all 0.3s ease;
+}
+
+.btn.active {
+  border-color: #FF8282;
+}
+
+.hero-text .social i {
+  color: #e5e5e5;
+  font-size: 18px;
+  margin-right: 10px;
+  transition: 0.5s;
+}
+
+.hero-text .social i:hover {
+  color: #FF6363; /* Updated social icon hover color */
+  transform: rotate(360deg);
+}
+
+/*=========================== 
+  Modal Styles
+===========================*/
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0; 
+  top: 0;
+  width: 100%; 
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.7);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 500px;
+  position: relative;
+  animation: fadeIn 0.3s ease-in-out;
+  color: var(--text-dark);
+}
+
+.close {
+  position: absolute;
+  top: 12px; 
+  right: 16px;
+  font-size: 1.5rem;
+  color: var(--text-dark);
+  cursor: pointer;
+}
+
+.open-modal-btn {
+  margin: 1rem auto;
+  display: block;
+  padding: 0.6rem 1.2rem;
+  background-color: var(--darker);
+  color: var(--text-light);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.open-modal-btn:hover {
+  background-color: var(--secondary);
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: scale(0.95);}
+  to {opacity: 1; transform: scale(1);}
+}
+
+/*=========================== 
+  Dark Theme Overrides
+===========================*/
+.dark-theme {
+  background: var(--dark);
+  color: #eee;
+}
+
+.dark-theme nav,
+.dark-theme footer {
+  background: var(--darker);
+}
+
+.dark-theme .navbar-nav li a,
+.dark-theme .dark-toggle {
+  color: #ccc;
+}
+
+.dark-theme .dropdown {
+  background: var(--darker);
+}
+
+.dark-theme .hero-header {
+  background: var(--dark);
+}
+
+.dark-theme .hero-text h5,
+.dark-theme .hero-text p,
+.dark-theme .hero-text .social i {
+  color: var(--text-light);
+}
+
+.dark-theme .hero-text h5 span,
+.dark-theme .hero-text h1 {
+  color: var(--primary);
+}
+
+.dark-theme .btn-group .btn {
+  background-color: var(--darker);
+  color: var(--text-light);
+  border-color: #ccc;
+}
+
+.dark-theme .btn.active {
+  border-color: var(--primary);
+}
+
+.dark-theme .hero-pic {
+  border-color: var(--primary);
+}
+
+.dark-theme .modal-content {
+  background-color: var(--darker);
+  color: #eee;
+}
+
+.dark-theme h2 {
+  color: var(--primary);
+}
+
+/*=========================== 
+  Responsive Design
+===========================*/
+@media(max-width: 930px) {
+  nav .togglebtn {
+    display: initial;
+  }
+
+  nav .navlinks {
+    position: absolute;
+    top: 110px;
+    right: -100%;
+    width: 60%;
+    height: 100vh;
+    background-color: #222;
+    z-index: 3;
+    box-shadow: 5px 13px 30px rgba(0, 0, 0, 0.1);
+    transition: 0.5s;
+    padding: 25px 0;
+  }
+
+  nav .navlinks li {
+    display: block;
+  }
+
+  nav .navlinks li a {
+    display: block;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  nav .navlinks.open {
+    right: 0;
+  }
+}
+
+@media(max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding-top: 2rem;
+  }
+
+  .hero-text {
+    padding: 40px 0;
+  }
+
+  .hero-pic {
+    margin: 0 auto;
+  }
+}
+
+.btn.active {
+  border-color: #FF8282;
+  background-color: #000000;
+  color: #FF8282;
+}
+
+.logo {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo i {
+  height: 45px;
+  width: 45px;
+  background-color: #FF6363; /* Updated logo color */
+  border-radius: 50%;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.5rem;
+  padding: 10px;
+  margin-right: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.logo .logo-text {
+  font-size: 24px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.dark-toggle {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.dark-toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 24px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 2px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #FF8282; /* Updated toggle color */
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+  <div class="hero-header">
+    <div class="wrapper">
+      <header>
+        <div class="logo">
+          <i class="fa-solid fa-A"></i>
+          <div class="logo-text">Aleen</div>
+      </div>
+
+        <!-- Toggle Button for Mobile Nav -->
+        <div class="nav-container">
+          <nav>
+            <div class="togglebtn" id="toggleBtn">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <ul class="navlinks" id="navLinks">
+              <li><a href="Aboutme.html">About</a></li>
+              <li><a href="Skills.html">Skills</a></li>
+              <li><a href="Certificate.html">Certificate</a></li>
+              <li><a href="Objectives.html">Professional Objectives</a></li>
+            </ul>
+          </nav>
+        
+          
+        </div>
+        <label class="dark-toggle">
+          <input type="checkbox" id="dark-mode-toggle">
+          <span class="slider"></span>
+        </label>
+        
+      </header>
+
+      <div class="container">
+        <div class="hero-text">
+          <h5>Hello, I'm <span>Aileen Rose R.</span></h5>
+          <h1>Web Developer</h1>
+          <p>I design and develop websites that are responsive and user-friendly.</p>
+          <div class="btn-group">
+            <button class="btn active">Hire Me</button>
+            <a href="Resume.html" class="btn" download>Download CV</a>
+          </div>
+           
+        <div class="hero-pic">
+          <img src="picture2.jpg" alt="Profile Picture"/>
+        </div>
+
+        <div class="social">
+          <a href="https://www.facebook.com/aileen.rose.gantala.rigor/" target="_blank">
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a href="https://www.instagram.com/aleen_3103/" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+          
+          <a href="mailto:rigoraileenrose@gmail.com" aria-label="Email Aileen">
+            <i class="fas fa-envelope"></i>
+          </a>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+
+
+const toggleBtn = document.getElementById("toggleBtn");
+const navLinks = document.getElementById("navLinks");
+
+toggleBtn.onclick = function () {
+  navLinks.classList.toggle("open");
+  toggleBtn.classList.toggle("click");
+};
+
+// Dark mode toggle
+const toggleSwitch = document.getElementById("dark-mode-toggle");
+
+toggleSwitch.addEventListener('change', () => {
+  document.body.classList.toggle('dark-theme', toggleSwitch.checked);
+});
+
+// Modal functionality (if you're using modals)
+function openModal() {
+  document.getElementById("infoModal").style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("infoModal").style.display = "none";
+}
+
+// Close modals on outside click
+window.onclick = function(event) {
+  const infoModal = document.getElementById("infoModal");
+  if (event.target == infoModal) {
+    closeModal();
+  }
+};
+
+  </script>
+</body>
+</html>

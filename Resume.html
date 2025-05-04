@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aileen  Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: #DBFFCB; /* Updated background color */
+    color: #333;
+    padding: 20px;
+  }
+  
+  .print-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 25px;
+    background-color: #FF6363; /* Updated button color */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  @media print {
+    .print-btn {
+      display: none;
+    }
+  }
+  
+  .resume-container {
+    max-width: 1000px;
+    margin: auto;
+    background: #fff;
+    display: flex;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .left-column {
+    width: 35%;
+    background: #BEE4D0; /* Updated left column background color */
+    padding: 30px;
+  }
+  
+  .right-column {
+    width: 65%;
+    padding: 30px;
+  }
+  
+  .section {
+    margin-bottom: 25px;
+  }
+  
+  h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #FF8282; /* Updated heading color */
+    margin-bottom: 10px;
+  }
+  
+  h2 {
+    font-size: 20px;
+    color: #FF8282; /* Updated subheading color */
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+  }
+  
+  h3 {
+    font-size: 16px;
+    margin-top: 10px;
+    font-weight: 500;
+  }
+  
+  p, li {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  
+  ul {
+    margin-left: 20px;
+  }
+  
+  .info p {
+    margin-bottom: 8px;
+  }
+</style>
+</head>
+<body>
+
+  
+
+  <div class="resume-container">
+    <!-- LEFT COLUMN -->
+    <div class="left-column">
+      <h1>Thaishin</h1>
+      <div class="section info">
+        <h2>Personal Info</h2>
+        <p><strong>Name:</strong> Aileen Rose R.</p>
+        <p><strong>Birthdate:</strong> May 31, 2004</p>
+        <p><strong>Age:</strong> 20</p>
+        <p><strong>Status:</strong> Single</p>
+        <p><strong>Nationality:</strong> Filipino</p>
+        <p><strong>Religion:</strong> Roman Catholic</p>
+        <p><strong>Phone:</strong> 09757575887</p>
+        <p><strong>Email:</strong> rigorialeenrosegmail@gmail.com</p>
+        <p><strong>Address:</strong> Guimba, Nueva Ecija</p>
+      </div>
+
+      <div class="section">
+        <h2>Skills</h2>
+        <ul>
+          <li>HTML, CSS, JavaScript</li>
+          <li>Django (Python)</li>
+          <li>Sublime Text</li>
+          <li>Responsive Design</li>
+          <li>Project Planning</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- RIGHT COLUMN -->
+    <div class="right-column">
+      <div class="section">
+        <h2>Summary</h2>
+        <p>Motivated IT student and mother, passionate about building accessible and helpful digital platforms. Strong in front-end and backend systems for school and personal apps.</p>
+      </div>
+
+      <div class="section">
+        <h2>Experience</h2>
+        <h3>Capstone Developer – OLSHCOnnect Portal</h3>
+        <p><em>2025 – Present</em></p>
+        <ul>
+          <li>Created student login, registration, and e-payment features using Django.</li>
+          <li>Designed clean, user-friendly UI with responsive CSS.</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>Education</h2>
+        <h3>BS in Information Technology</h3>
+        <p>Our Lady of the Sacred Heart College, Guimba<br><em>Expected Graduation: 2025</em></p>
+      </div>
+
+      <div class="section">
+        <h2>Projects</h2>
+        <ul>
+          <li><strong>OLSHCOnnect Portal:</strong> Web system for student registration, login, and payments.</li>
+        </ul>
+        <button class="print-btn" onclick="window.print()">Download</button>
+      </div>
+    </div>
+    
+  </div>
+
+</body>
+</html>
